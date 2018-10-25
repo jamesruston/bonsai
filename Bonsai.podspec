@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Bonsai'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Bonsai.'
+  s.summary          = 'A lightweight logging library'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  Bonsai is a lightweight logging library with support for multiple outputs, custom drivers, log levels (with emojis 🎉), debug focus mode and a handy string extension.
+
                        DESC
 
   s.homepage         = 'https://github.com/jamesruston/Bonsai'
@@ -28,7 +29,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/jamesruston/Bonsai.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'Bonsai/Classes/**/*'
   

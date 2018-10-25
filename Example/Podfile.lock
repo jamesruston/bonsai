@@ -1,0 +1,16 @@
+PODS:
+  - Bonsai (0.1.0)
+
+DEPENDENCIES:
+  - Bonsai (from `../`)
+
+EXTERNAL SOURCES:
+  Bonsai:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Bonsai: cc42212220e9b0e83bee057b2169a1a6136ff211
+
+PODFILE CHECKSUM: 7b29511a1e5b8f12d63262ad4acd84e421bf79c4
+
+COCOAPODS: 1.5.3

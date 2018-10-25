@@ -6,7 +6,8 @@
 //  Copyright (c) 2018 jamesruston. All rights reserved.
 //
 
-import UIKit
+import Bonsai
+public typealias Logger = Bonsai
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

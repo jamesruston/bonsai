@@ -1,0 +1,6 @@
+framework module Bonsai {
+  umbrella header "Bonsai-umbrella.h"
+
+  export *
+  module * { export * }
+}

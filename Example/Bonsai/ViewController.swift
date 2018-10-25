@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        Logger.log(.verbose, "verbose")
+        "".log(.verbose)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

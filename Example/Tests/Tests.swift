@@ -1,28 +1,61 @@
 import XCTest
-import Bonsai
+@testable import Bonsai
 
 class Tests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+ 
+    class StubDriver: BonsaiDriver {
+        var callcount = 0
+        func log(level: LogLevel, _ message: String, file: String, function: String, line: Int) {
+            callcount += 1
+        }
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        Bonsai.resetDrivers()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testRegisteringMultipleDrivers() {
+        let driver = StubDriver()
+        let driver2 = StubDriver()
+        
+        Bonsai.register(driver: driver)
+        
+        XCTAssertEqual(Bonsai.drivers.count, 1)
+        
+        Bonsai.register(driver: driver2)
+        
+        XCTAssertEqual(Bonsai.drivers.count, 2)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
+    func testCannotRegisterSameDriverMultipleTimes() {
+        let driver = StubDriver()
+        
+        Bonsai.register(driver: driver)
+        Bonsai.register(driver: driver)
+        
+        XCTAssertEqual(Bonsai.drivers.count, 1)
+    }
+    
+    func testDriverCalledWhenLogging() {
+        let driver = StubDriver()
+        Bonsai.register(driver: driver)
+        
+        "".log(.verbose)
+        
+        XCTAssertEqual(driver.callcount, 1)
+    }
+    
+    func testDebugFocus() {
+        let driver = StubDriver()
+        Bonsai.debugFocusEnabled = true
+        Bonsai.register(driver: driver)
+        
+        "".log(.error)
+        "".log(.verbose)
+        "".log(.warning)
+        
+        XCTAssertEqual(driver.callcount, 0)
     }
     
 }
