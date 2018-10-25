@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Bonsai_Example' do
+  pod 'Bonsai', :path => '../'
+
+  target 'Bonsai_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
