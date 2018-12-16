@@ -62,8 +62,11 @@ public protocol BonsaiDriver: class {
     func log(level: LogLevel, _ message: String, file: String, function: String, line: Int)
 }
 
-class ConsoleLogger: BonsaiDriver {
-    func log(level: LogLevel, _ message: String, file: String, function: String, line: Int) {
+public class ConsoleLogger: BonsaiDriver {
+    
+    public init() {}
+    
+    public func log(level: LogLevel, _ message: String, file: String, function: String, line: Int) {
         guard let fileName = file.split(separator: "/").last else { return }
         
         #if DEBUG
