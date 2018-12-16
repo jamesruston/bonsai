@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'Bonsai'
   s.version          = '0.1.0'
   s.summary          = 'A lightweight logging library'
+  s.swift_version    = '4.2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -31,7 +32,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Bonsai/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
   #   'Bonsai' => ['Bonsai/Assets/*.png']
