@@ -47,7 +47,9 @@ public class Bonsai {
     }
     
     public static func register(driver: BonsaiDriver) {
-        guard !(drivers.contains { $0 === driver }) else { return }
+        guard !(drivers.contains { $0 === driver }) else {
+            return
+        }
         drivers.append(driver)
     }
     

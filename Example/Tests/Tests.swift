@@ -10,8 +10,8 @@ class Tests: XCTestCase {
         }
     }
     
-    override func tearDown() {
-        super.tearDown()
+    override func setUp() {
+        super.setUp()
         Bonsai.resetDrivers()
     }
     
