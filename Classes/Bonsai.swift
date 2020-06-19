@@ -1,5 +1,5 @@
 //
-//  Copyright © 2018 John Crossley. All rights reserved.
+//  Copyright © 2020 James Ruston. All rights reserved.
 //
 
 import Foundation
