@@ -77,6 +77,7 @@ public class ConsoleLogger: BonsaiDriver {
     }
 }
 
+@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 class OSLogger: BonsaiDriver {
     private let oslog: OSLog
     
@@ -104,7 +105,7 @@ class OSLogger: BonsaiDriver {
 
 public extension String {
     
-    public func log(_ level: LogLevel, file: String = #file, function: String = #function, line: Int = #line) {
+    func log(_ level: LogLevel = .verbose, file: String = #file, function: String = #function, line: Int = #line) {
         Bonsai.log(level: level, self, file: file, function: function, line: line)
     }
 }
