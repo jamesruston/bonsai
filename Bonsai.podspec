@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bonsai'
-  s.version          = '0.1.1'
+  s.version          = '0.2.2'
   s.summary          = 'A lightweight logging library'
   s.swift_version    = '4.2'
 
