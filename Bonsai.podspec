@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Bonsai'
-  s.version          = '0.2.2'
+  s.version          = '0.2.4'
   s.summary          = 'A lightweight logging library'
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.2'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
