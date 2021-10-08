@@ -77,7 +77,7 @@ public class ConsoleLogger: BonsaiDriver {
     }
 }
 
-@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+@available(OSX 10.12, iOS 10.0, iOSApplicationExtension 10.0, watchOS 3.0, tvOS 10.0, *)
 class OSLogger: BonsaiDriver {
     private let oslog: OSLog
     
