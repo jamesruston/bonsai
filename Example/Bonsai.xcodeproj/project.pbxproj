@@ -266,21 +266,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai_Example/Pods-Bonsai_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Bonsai_Example/Pods-Bonsai_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bonsai/Bonsai.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bonsai.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonsai_Example/Pods-Bonsai_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bonsai_Example/Pods-Bonsai_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9A2FFE888779E1EA59601F67 /* [CP] Check Pods Manifest.lock */ = {
