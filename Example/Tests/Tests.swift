@@ -8,6 +8,15 @@ class Tests: XCTestCase {
         func log(level: LogLevel, _ message: String, file: String, function: String, line: Int) {
             callcount += 1
         }
+        
+        func log(level: LogLevel, _ metadata: [AnyHashable : Any], file: String, function: String, line: Int) {
+            callcount += 1
+        }
+        
+        var storeCallCount = 0
+        func store(_ params: [AnyHashable : Any]) {
+            storeCallCount += 1
+        }
     }
     
     override func setUp() {
@@ -42,6 +51,35 @@ class Tests: XCTestCase {
         Bonsai.register(driver: driver)
         
         "".log(.verbose)
+        
+        XCTAssertEqual(driver.callcount, 1)
+    }
+    
+    func testDriversCalledWhenLoggingAgainstDictionary() {
+        let driver = StubDriver()
+        Bonsai.register(driver: driver)
+        
+        ["name": "Mr. Pink"].log(.warning)
+        
+        XCTAssertEqual(driver.callcount, 1)
+    }
+    
+    func testCanCallStoreAgainstDictionary() {
+        let driver = StubDriver()
+        Bonsai.register(driver: driver)
+        
+        ["Hello": "World"].store()
+        
+        XCTAssertEqual(driver.storeCallCount, 1)
+    }
+    
+    func testItCanLogErrors() {
+        struct MyGenericError: Error {}
+        
+        let driver = StubDriver()
+        Bonsai.register(driver: driver)
+        
+        MyGenericError().log()
         
         XCTAssertEqual(driver.callcount, 1)
     }
