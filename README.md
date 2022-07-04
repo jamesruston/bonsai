@@ -1,6 +1,5 @@
 # Bonsai
 
-[![CI Status](https://img.shields.io/travis/jamesruston/Bonsai.svg?style=flat)](https://travis-ci.org/jamesruston/Bonsai)
 [![Version](https://img.shields.io/cocoapods/v/Bonsai.svg?style=flat)](https://cocoapods.org/pods/Bonsai)
 [![License](https://img.shields.io/cocoapods/l/Bonsai.svg?style=flat)](https://cocoapods.org/pods/Bonsai)
 [![Platform](https://img.shields.io/cocoapods/p/Bonsai.svg?style=flat)](https://cocoapods.org/pods/Bonsai)
